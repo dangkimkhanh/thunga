@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chúc mừng sinh nhật!</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+        body{
+            background-image: url(./img/dem.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100% ;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            }
+
+        #birthday-wishes {
+            margin-top: 17%;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+
+        }
+		#birthday-wishes p {
+            width: 100%;
+            text-align: center;
+			display: none;
+            font-size: 55px;
+            color: green;
+    
+		}
+		#birthday-wishes p.active {
+			display: block;
+		}
+        #btn-agree,#btn-next{
+            margin-top: 30%;
+           margin-left: 55%;
+           position: absolute;
+           width: 100px;
+           height: 40px;
+           font-size: 20px;
+           border-radius: 25px;
+           background-color: goldenrod;
+           color: aliceblue;
+        }
+        #btn-prev{
+           margin-top: 30%;
+           margin-left: 40%;
+           position: absolute;
+           width: 100px;
+           height: 40px;
+           font-size: 20px;
+           border-radius: 25px;
+          
+          
+        }
+     
+	</style>
+</head>
+<body>
+	<div id="birthday-wishes">
+		<p class="active">Chúc mừng sinh nhật!</p>
+		<p>Chúc bạn có một ngày sinh nhật thật vui vẻ và đầy ý nghĩa.</p>
+		<p>Mong rằng tương lai của bạn sẽ đầy hạnh phúc và thành công.</p>
+		<p>Cảm ơn bạn đã là một người bạn tuyệt vời.</p>
+		<p>Chúc mừng sinh nhật lần nữa!</p>
+
+		
+	</div>
+    <div>
+        <button id="btn-prev" disabled>Đọc lại</button>
+		<button id="btn-next">Đọc tiếp</button>
+		<button id="btn-agree" style="display: none;">Đồng ý</button>
+    </div>
+
+
+	<script>
+		let currentWishIndex = 0;
+		const wishes = document.querySelectorAll('#birthday-wishes p');
+		const btnPrev = document.querySelector('#btn-prev');
+		const btnNext = document.querySelector('#btn-next');
+		const btnAgree = document.querySelector('#btn-agree');
+
+		btnPrev.addEventListener('click', function() {
+			if (currentWishIndex > 0) {
+				currentWishIndex--;
+				wishes[currentWishIndex + 1].classList.remove('active');
+				wishes[currentWishIndex].classList.add('active');
+				btnNext.disabled = false;
+				if (currentWishIndex === 0) {
+					btnPrev.disabled = true;
+				}
+				btnAgree.style.display = 'none';
+			}
+		});
+
+		btnNext.addEventListener('click', function() {
+			if (currentWishIndex < wishes.length - 1) {
+				currentWishIndex++;
+				wishes[currentWishIndex - 1].classList.remove('active');
+				wishes[currentWishIndex].classList.add('active');
+				btnPrev.disabled = false;
+				if (currentWishIndex === wishes.length - 1) {
+					btnNext.disabled = true;
+					btnAgree.style.display = 'block';
+				}
+			}
+        
+		});
+            btnAgree.onclick = function() {
+                window.history.pushState({page: "oldPage"}, "cauchuc.html", "");
+            window.location.href = "new-page.html";
+            }
+	</script>
+</body>
+</html>

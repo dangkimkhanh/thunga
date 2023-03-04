@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thiệp sinh nhật</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+  </head>
+  <body>
+    <h2>𝓑Ấ𝓜 𝓥À𝓞 ĐỂ 𝓜Ở 𝓗Ộ𝓟 𝓠𝓤À</h2>
+    <div class="container">
+        <div class="gift-box"></div>
+
+    </div> 
+    <style>
+      body {
+        background-color: #000;
+      }
+      .gift-box {
+    width: 150px;
+    height: 150px;
+    background-color: #000;
+    background-image: url('https://emojigraph.org/media/facebook/wrapped-gift_1f381.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px 150px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+  
+  h2 {
+    position: absolute;
+    color: green;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+  
+  .explosion {
+    background-image: url('https://emojigraph.org/media/google/fireworks_1f386.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    animation-name: explosion;
+    animation-duration: 1s;
+  }
+  
+  @keyframes explosion {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+</style>
+
+<script>
+ document.querySelector('.gift-box').addEventListener('click', function() {
+  // Thêm hiệu ứng nổ ra
+  var explosion = document.createElement('div');
+  explosion.classList.add('explosion');
+  this.appendChild(explosion);
+
+  // Chuyển hướng sang trang HTML mới sau khi kết thúc hiệu ứng
+  setTimeout(function() {
+    window.location.href = 'loichuc.html';
+  }, 500);
+});
+
+</script>
+<img src="https://bom.so/3LVVyW" id="im1">
+<img src="https://bom.so/3LVVyW" id="im1">
+<img src="https://bom.so/3LVVyW" id="im1">
+<img src="https://bom.so/3LVVyW" id="im1">
+<img src="https://bom.so/3LVVyW" id="im1">
+<img src="https://bom.so/3LVVyW" id="im1">
+<img src="https://bom.so/3LVVyW" id="im1">
+<img src="https://bom.so/3LVVyW" id="im2">
+<img src="https://bom.so/3LVVyW" id="im2">
+<img src="https://bom.so/3LVVyW" id="im2">
+<img src="https://bom.so/3LVVyW" id="im3">
+<img src="https://bom.so/3LVVyW" id="im3">
+<img src="https://bom.so/3LVVyW" id="im3">
+<img src="https://bom.so/3LVVyW" id="im4">
+<img src="https://bom.so/3LVVyW" id="im4">
+<img src="https://bom.so/3LVVyW" id="im4">
+<img src="https://bom.so/3LVVyW" id="im4">
+<img src="https://bom.so/3LVVyW" id="im4">
+<img src="https://bom.so/3LVVyW" id="im4">
+<img src="https://bom.so/3LVVyW" id="im4">
+<img src="/img/anh.jpg" id="im5">
+<img src="/img/icon.png" id="im6">
+<img src="/img/icon.png" id="im7">
+
+</body>
+</html>
