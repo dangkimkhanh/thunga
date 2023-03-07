@@ -17,7 +17,6 @@
             }
 
         #birthday-wishes {
-            margin-top: 17%;
             position: absolute;
             text-align: center;
             width: 100%;
@@ -25,10 +24,12 @@
         }
 		#birthday-wishes p {
             width: 100%;
+            margin-top: 15%;
             text-align: center;
 			display: none;
-            font-size: 55px;
-            color: green;
+            position: absolute;
+            font-size:4em;
+           
     
 		}
 		#birthday-wishes p.active {
@@ -44,6 +45,7 @@
            border-radius: 25px;
            background-color: goldenrod;
            color: aliceblue;
+           cursor: pointer;
         }
         #btn-prev{
            margin-top: 30%;
@@ -53,19 +55,55 @@
            height: 40px;
            font-size: 20px;
            border-radius: 25px;
+           cursor: pointer;
           
           
         }
-     
+    #anh1{
+        position: absolute;
+        top: 73%;
+        left: 43%;
+    }
+    #anh0{
+        position: absolute;
+        top: 73%;
+        left: 50%;
+    }
+    #cau{
+        background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    .active{
+        color: #f00;
+    }
+    #cau2{
+        color: orange;
+    }
+    #cau3{
+        color: yellow;
+    }
+    #cau4{
+        color: green;
+    }
+    #cau5{
+        color: #f0f;
+        
+    }
 	</style>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <img id="anh1" src="./img/so0.png" alt="">
+    <img id="anh0" src="./img/so2.png" alt="">
 	<div id="birthday-wishes">
-		<p class="active">Chúc mừng sinh nhật!</p>
-		<p>Chúc bạn có một ngày sinh nhật thật vui vẻ và đầy ý nghĩa.</p>
-		<p>Mong rằng tương lai của bạn sẽ đầy hạnh phúc và thành công.</p>
-		<p>Cảm ơn bạn đã là một người bạn tuyệt vời.</p>
-		<p>Chúc mừng sinh nhật lần nữa!</p>
+		<p class="active">💪Chúc bạn tuổi mới thành công hơn nhé💪 </p>
+		<p id="cau2">💚Chúc bạn sẽ luôn cảm thấy vui vẻ hạnh phúc ạ💚</p>
+		<p id="cau3">🐐Chúc bạn luôn mạnh khỏe và mạnh mẽ bước tiếp🐐</p>
+		<p id="cau4">👩‍⚕️Chúc bạn một ngày sinh nhật đầy ý nghĩa ạ👩‍⚕️</p>
+        <p id="cau5">🍀Chúc bạn luôn gặp nhiều may mắn sau này ạ🍀</p>
+		<p id="cau">Cuối cùng mình có một câu hỏi muốn dành cho bạn nè<br>^-^  ^-^ <br>................</p>
 
 		
 	</div>
@@ -77,6 +115,10 @@
 
 
 	<script>
+        $(document).ready(function(){
+    $("body").css("display", "none");
+    $("body").fadeIn(2000);
+  });
 		let currentWishIndex = 0;
 		const wishes = document.querySelectorAll('#birthday-wishes p');
 		const btnPrev = document.querySelector('#btn-prev');

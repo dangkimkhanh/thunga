@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cake</title>
+    
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    #phao{
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 20%;
+    bottom: 0;
+    right: 0%; 
+    z-index: 1;
+}
+    #cake{
+        position: absolute;
+        top: 50;
+        left: 50;
+    }
+
+#my{
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: 100%;
+    bottom: 0;
+}
+#banh{
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: 100%;
+    bottom: 0;
+    right: 3%;
+}
+#loinoi{
+    position: absolute;
+    top: 2%;
+    left: 40%;
+    width: 200px;
+    height: 100%;
+   
+    text-align: center;
+    font-size: 23px;
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+}
+#theicon{
+    position: absolute;
+    bottom: 0.5%;
+    left: 42%;
+    
+}
+.birthday-text {
+            font-family: 'Script MT Bold', cursive;
+            font-style: italic;
+            text-align: center;
+            position: absolute;
+            bottom: 14%;
+            right: 17%;
+            color: #fff;
+            font-size: 20px;
+        }
+</style>
+<body>
+    <img id="phao" src="./img/phao.png" alt="">
+    <img id="my" src="./img/my.jpg" alt="">
+    <img id="banh" src="./img/banh123.png" alt="">
+    <audio autoplay>
+        <source src="./audio/hpbirthday.mp3" type="audio/mpeg">
+        </audio>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("body").css("display", "none");
+        $("body").fadeIn(2000);
+        });
+    </script>
+    <div id="loinoi">
+        <h1>bây giờ bạn có thể cầu nguyện và thổi nến nhưng nến tắt hay không tôi không biết </h1>
+    </div>
+    <h1 id="theicon">🥲🥲🥲</h1>
+    <div class="birthday-text">
+        Chúc mừng sinh nhật <br>
+        07/03/2003
+    </div>
+</body>
+</html>

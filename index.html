@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style1.css">
   </head>
   <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <h2>𝓑Ấ𝓜 𝓥À𝓞 ĐỂ 𝓜Ở 𝓗Ộ𝓟 𝓠𝓤À</h2>
     <div class="container">
         <div class="gift-box"></div>
@@ -68,6 +69,10 @@
 </style>
 
 <script>
+  $(document).ready(function(){
+    $("body").css("display", "none");
+    $("body").fadeIn(2000);
+  });
  document.querySelector('.gift-box').addEventListener('click', function() {
   // Thêm hiệu ứng nổ ra
   var explosion = document.createElement('div');
@@ -101,9 +106,9 @@
 <img src="https://bom.so/3LVVyW" id="im4">
 <img src="https://bom.so/3LVVyW" id="im4">
 <img src="https://bom.so/3LVVyW" id="im4">
-<img src="/img/anh.jpg" id="im5">
-<img src="/img/icon.png" id="im6">
-<img src="/img/icon.png" id="im7">
+<img src="./img/anh.jpg" id="im5">
+<img src="./img/icon.png" id="im6">
+<img src="./img/icon.png" id="im7">
 
 </body>
 </html>

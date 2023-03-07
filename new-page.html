@@ -1,66 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Buttons</title>
-    <link rel="stylesheet" type="text/css" href="style1.css">
-	<style>
-        body{
-        background-color: #333;
-        }
-		.button {
-			display: inline-block;
-			padding: 12px 24px;
-			background-color: #4CAF50;
-			color: white;
-			text-align: center;
-			text-decoration: none;
-			font-size: 16px;
-			margin: 4px 2px;
-			border-radius: 25px;
-			box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
-			border: none;
-			outline: none;
-			cursor: pointer;
-		}
-
-		.button-1 {
-			background-color: #2901a0;
-		}
-
-		.button-2 {
-			background-color: #ff2e2e;
-		}
-
-		.button-1:hover, .button-2:hover {
-			box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
-		}
-
-		.button-1:active, .button-2:active {
-			box-shadow: none;
-			transform: translateY(2px);
-		}
-
-		.button-rounded {
-			border-radius: 50%;
-			height: 50px;
-			width: 50px;
-			line-height: 50px;
-			font-size: 20px;
-			background-color: #4CAF50;
-			color: white;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
-			border: none;
-			outline: none;
-			cursor: pointer;
-		}
-	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>question</title>
 </head>
 <body>
-	<button class="button button-1">ĐỒNG Ý</button>
-	<button class="button button-2">KHÔNG</button>
-    <h1>bạn thấy tôi như thế nào rất tốt đúng không 😢</h1>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<div class="container">
+		<button id="btn-yes">ĐÚNG</button>
+		<button id="btn-no">KHÔNG</button>
+	  </div>
+	  <div>
+		<h1 id="tieude" >🤭Trả lời đúng để được cắt bánh ạ🤭</h1>
+		<h1>Bạn rất ghét tôi đúng không ?</h1>
+	  </div>
+	  <img id="icon1" src="./img/icon1.jpg" alt="">
+	  <img id="icon2" src="./img/icon2.jpg" alt="">
+	  <img id="icon3" src="./img/icon3.jpg" alt="">
+	  <img id="icon4" src="./img/icon4.jpg" alt="">
+	  <style>
+		body{
+			background-color: black;
+		}
+		#tieude{
+			position: absolute;
+			top: 3%;
+			right: 0%;
+			left: 0;
+			text-align: center;
+			color: aqua;
+		}
+		#icon1,#icon2,#icon3,#icon4{
+			position: absolute;
+			width: 20%;
+			height: 40%;
+		}
+		#icon1{
+			top: 0;
+			left: 0;
+		}
+		#icon2{
+			top: 0;
+			right: 0;
+		}
+		#icon3{
+			bottom: 0;
+			left: 0;
+		}
+		#icon4{
+			bottom: 0;
+			right: 0;
+		}
+		h1{
+			position: absolute;
+			text-align: center;
+			top: 35%;
+			color: #ffffff;
+			font-size: 50px;
+			left: 0;
+			right: 0;
+		}
+		.container {
+		  
+		  justify-content: center;
+		  align-items: center;
+		  height: 100vh;
+		}
+	  
+		#btn-yes, #btn-no {
+			display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 25px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+            border: none;
+            outline: none;
+            cursor: pointer;
+			width: 120px;
+           height: 40px;
+
+		}
+	  
+		#btn-yes {
+		  background-color: green;
+		  color: white;
+		  position: absolute;
+		  left: 40%;
+		  top: 60%;
+		  position: absolute;
+		
+			transform: translate(-50%, -50%);
+		
+		}
+	  
+		#btn-no {
+			position: absolute;
+			left: 60%;
+			top: 60%;
+			transform: translate(-50%, -50%);
+			
+			background-color: red;
+			color: white;
+			border: none;
+			cursor: pointer;
+			}
+	  
+		#btn-no:hover {
+		  transition: none;
+		}
+	  
+		#btn-no:hover::before {
+		  content: "";
+		  position: absolute;
+		  top: 50%;
+		  left: -10px;
+		  transform: translate(-50%, -50%);
+		  border-top: 10px solid transparent;
+		  border-bottom: 10px solid transparent;
+		  background-color: red;
+		}
+		.swal-overlay {
+  			 background-color: rgb(0, 0, 0); /* Thiết lập độ trong suốt cho background của bảng thông báo */
+}
+
+		.swal-modal {
+			background-color: #ffffff; /* Thiết lập màu nền cho bảng thông báo */
+			opacity: 1; /* Thiết lập độ trong suốt của bảng thông báo */
+}
+
+	  </style>
+	 <script>
+		$(document).ready(function(){
+		$("body").css("display", "none");
+		$("body").fadeIn(2000);
+		});
+					// Lưu trữ vị trí hiện tại của nút "Không"
+			let currentPos = "top";
+
+			// Lấy đối tượng nút "Không"
+			let noBtn = document.getElementById("btn-no");
+
+			// Tạo hàm để xác định vị trí mới của nút "Không"
+			function getNewPosition() {
+			if (currentPos === "top") {
+				currentPos = "bottom";
+				return "60%";
+			} else {
+				currentPos = "top";
+				return "10%";
+			}
+			}
+
+			// Thêm sự kiện cho nút "Không"
+			noBtn.addEventListener("mouseover", function() {
+			// Lấy vị trí mới của nút "Không"
+			let newPos = getNewPosition();
+			
+			// Cập nhật vị trí của nút "Không"
+			noBtn.style.top = newPos;
+			noBtn.style.transform = "translate(-50%, -50%)";
+			});
+
+			noBtn.addEventListener("mouseout", function() {
+			// Không làm gì nếu rời chuột khỏi nút "Không"
+			});
+			const myButton = document.getElementById("btn-yes");
+
+			myButton.addEventListener("click", function() {
+			swal("😔Tôi biết bạn chọn vậy mà😔", "bây giờ bạn hãy ước đi ạ", "success");
+			});
+			document.getElementById("btn-yes").addEventListener("click", function(){
+			setTimeout(function(){
+				window.location.href = "banh.html";
+			}, 9000);
+			});
+
+	 </script> 
 </body>
 </html>
