@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>question</title>
+	<title>chazoo</title>
 </head>
 <body>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -13,8 +13,8 @@
 		<button id="btn-no">KHÔNG</button>
 	  </div>
 	  <div>
-		<h1 id="tieude" >🤭Trả lời đúng để được cắt bánh ạ🤭</h1>
-		<h1>Bạn rất ghét tôi đúng không ?</h1>
+		<h1 id="tieude" >🤭Câu hỏi có độ khó tương đối cao hãy thận trọng🤭</h1>
+		<h1>Tối nay có một bữa thịnh soạn và không mời em đúng không ạ ?</h1>
 	  </div>
 	  <img id="icon1" src="./img/icon1.jpg" alt="">
 	  <img id="icon2" src="./img/icon2.jpg" alt="">
@@ -29,6 +29,7 @@
 			top: 3%;
 			right: 0%;
 			left: 0;
+			font-size: 38px;
 			text-align: center;
 			color: aqua;
 		}
@@ -56,9 +57,9 @@
 		h1{
 			position: absolute;
 			text-align: center;
-			top: 35%;
+			top: 38%;
 			color: #ffffff;
-			font-size: 50px;
+			font-size: 45px;
 			left: 0;
 			right: 0;
 		}
@@ -174,12 +175,12 @@
 			const myButton = document.getElementById("btn-yes");
 
 			myButton.addEventListener("click", function() {
-			swal("😔Tôi biết bạn chọn vậy mà😔", "bây giờ bạn hãy ước đi ạ", "success");
+			swal("Bùn qúa đi à huhu😔", "thoi bùn quen ròi hong sao", "success");
 			});
 			document.getElementById("btn-yes").addEventListener("click", function(){
 			setTimeout(function(){
 				window.location.href = "banh.html";
-			}, 9000);
+			}, 7000);
 			});
 
 	 </script> 
