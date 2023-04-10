@@ -3,18 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>chazoo</title>
+	<title>Thu Trang</title>
 </head>
 <body>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<div class="container">
-		<button id="btn-yes">ĐÚNG</button>
+		<button id="btn-yes">ĐỒNG Ý</button>
 		<button id="btn-no">KHÔNG</button>
 	  </div>
 	  <div>
-		<h1 id="tieude" >🤭Câu hỏi có độ khó tương đối cao hãy thận trọng🤭</h1>
-		<h1>Tối nay có một bữa thịnh soạn và không mời em đúng không ạ ?</h1>
+		<h1 id="tieude" >🤭vốn dĩ là câu hỏi nhưng mà thôi🤭</h1>
+		<h1>mong bạn sau này lâu lâu vẫn nhớ tới tui nhất là cưới nhớ mời tui để tui thấy khoảnh khắc đẹp nhất của bạn</h1>
 	  </div>
 	  <img id="icon1" src="./img/icon1.jpg" alt="">
 	  <img id="icon2" src="./img/icon2.jpg" alt="">
@@ -26,10 +26,10 @@
 		}
 		#tieude{
 			position: absolute;
-			top: 3%;
+			top: 10%;
 			right: 0%;
 			left: 0;
-			font-size: 38px;
+			font-size: 50px;
 			text-align: center;
 			color: aqua;
 		}
@@ -60,8 +60,8 @@
 			top: 38%;
 			color: #ffffff;
 			font-size: 45px;
-			left: 0;
-			right: 0;
+			left: 10%;
+			right: 10%;
 		}
 		.container {
 		  
@@ -94,7 +94,7 @@
 		  color: white;
 		  position: absolute;
 		  left: 40%;
-		  top: 60%;
+		  top: 70%;
 		  position: absolute;
 		
 			transform: translate(-50%, -50%);
@@ -104,7 +104,7 @@
 		#btn-no {
 			position: absolute;
 			left: 60%;
-			top: 60%;
+			top: 70%;
 			transform: translate(-50%, -50%);
 			
 			background-color: red;
@@ -152,10 +152,10 @@
 			function getNewPosition() {
 			if (currentPos === "top") {
 				currentPos = "bottom";
-				return "60%";
+				return "70%";
 			} else {
 				currentPos = "top";
-				return "25%";
+				return "30%";
 			}
 			}
 
@@ -175,7 +175,7 @@
 			const myButton = document.getElementById("btn-yes");
 
 			myButton.addEventListener("click", function() {
-			swal("Bùn qúa đi à huhu😔", "thoi bùn quen ròi hong sao", "success");
+			swal("cảm ơn bạn đã nhận lời nhé ", "tui ghi nhớ lựa chọn của bạn rồi", "success");
 			});
 			document.getElementById("btn-yes").addEventListener("click", function(){
 			setTimeout(function(){

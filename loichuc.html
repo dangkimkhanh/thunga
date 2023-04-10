@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>hihi</title>    
+	<title>Thu Trang</title>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
         body{
@@ -36,7 +36,7 @@
 			display: block;
 		}
         #btn-agree,#btn-next{
-            margin-top: 30%;
+            margin-top: 31%;
            margin-left: 55%;
            position: absolute;
            width: 100px;
@@ -48,7 +48,7 @@
            cursor: pointer;
         }
         #btn-prev{
-           margin-top: 30%;
+           margin-top: 31%;
            margin-left: 40%;
            position: absolute;
            width: 100px;
@@ -105,17 +105,15 @@
 	</style>
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <p id="cau1">HAPPY BIRTHDAY</p>
-    <img id="anh1" src="./img/so0.png" alt="">
-    <img id="anh0" src="./img/so2.png" alt="">
+ 
 	<div id="birthday-wishes">
-		<p class="active">💪Chúc chụy tuổi mới đạt nhiều thành công nhé💪 </p>
-		<p id="cau2">💚Chúc chụy luôn cảm thấy vui vẻ và hạnh phúc ạ💚</p>
-		<p id="cau3">Chúc chụy luôn mạnh khỏe xuynh đẹp và mạnh mẽ <br>🐐🐐</p>
-		<p id="cau4">👻Chúc chụy có một ngày sinh nhật đầy ý nghĩa ạ👻</p>
-        <p id="cau5">🍀Chúc chụy luôn gặp nhiều may mắn sau này ạ🍀</p>
-		<p id="cau">Cuối cùng thì có một câu hỏi muốn dành cho chụy nè<br>^-^  ^-^ <br>................</p>
+		<p class="active">💪Chúc bạn tuổi mới đạt nhiều thành công nhé💪 </p>
+		<p id="cau2">💚Chúc bạn luôn mạnh khỏe vui vẻ và hạnh phúc ạ💚</p>
+		<p id="cau3">🐐 chúc bạn sớm tìm được người iu 🐐</p>
+		<p id="cau4">👻 Chúc bạn luôn đạt được thật nhiều điểm A+ 👻</p>
+        <p id="cau5">🍀Chúc bạn luôn gặp được nhiều may mắn🍀</p>
+		<p id="cau">Cuối cùng thì chúc bạn kiếm được thật nhiều tiền <br>^-^để mua ô tô đi học cho đỡ lạnh^-^ <br>................</p>
 
 		
 	</div>
@@ -124,13 +122,12 @@
 		<button id="btn-next">Đọc tiếp</button>
 		<button id="btn-agree" style="display: none;">Đồng ý</button>
     </div>
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
-        $(document).ready(function(){
-    $("body").css("display", "none");
-    $("body").fadeIn(2000);
-  });
+         $(document).ready(function(){
+        $("body").css("display", "none");
+        $("body").fadeIn(2000);
+    });
 		let currentWishIndex = 0;
 		const wishes = document.querySelectorAll('#birthday-wishes p');
 		const btnPrev = document.querySelector('#btn-prev');
@@ -165,7 +162,7 @@
 		});
             btnAgree.onclick = function() {
                 window.history.pushState({page: "oldPage"}, "cauchuc.html", "");
-            window.location.href = "new-page.html";
+            window.location.href = "newap.html";
             }
 	</script>
 </body>

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ahihixinhqua</title>
+    <title>Thu Trang</title>
     
 </head>
+
 <style>
     body{
         background-color: black;
@@ -26,10 +27,10 @@
         left: 50;
     }
 
-#my{
+#thutrang{
     position: absolute;
     top: 0;
-    width: 40%;
+    width: 32%;
     height: 100%;
     bottom: 0;
 
@@ -44,13 +45,13 @@
 }
 #loinoi{
     position: absolute;
-    top: 2%;
-    left: 40%;
-    width: 200px;
+    top: 1%;
+    left: 35%;
+    width: 250px;
     height: 100%;
    
     text-align: center;
-    font-size: 23px;
+    font-size: 30px;
     background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
         background-clip: text;
         -webkit-background-clip: text;
@@ -58,8 +59,8 @@
 }
 #theicon{
     position: absolute;
-    bottom: 0.5%;
-    left: 42%;
+    bottom: 10%;
+    left: 39%;
     
 }
 .birthday-text {
@@ -67,33 +68,52 @@
             font-style: italic;
             text-align: center;
             position: absolute;
-            bottom: 14%;
+            bottom: 15%;
             right: 17%;
             color: #fff;
             font-size: 20px;
         }
+    #clicknew{
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 25px;
+        background-color: rgb(29, 46, 124);
+        color: rgb(192, 195, 197);
+        cursor: pointer;
+        bottom: 5%;
+        left: 40%;
+        z-index: 1;
+    }
 </style>
 <body>
     <img id="phao" src="./img/phao.png" alt="">
-    <img id="my" src="./img/minh.jpg" alt="">
+    <img id="thutrang" src="./img/thutrang.jpg" alt="">
     <img id="banh" src="./img/banh123.png" alt="">
     <audio autoplay>
         <source src="./audio/hpbirthday.mp3" type="audio/mpeg">
         </audio>  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<button id="clicknew" onclick="redirectToNewPage()">>>>></button>
+
+
     <script>
         $(document).ready(function(){
         $("body").css("display", "none");
         $("body").fadeIn(2000);
         });
+        function redirectToNewPage() {
+             window.location.href = "texta.html";
+        }
     </script>
     <div id="loinoi">
-        <h1>bây giờ chụy có thể cầu nguyện và thổi nến nhưng nến tắt hay không em không biết </h1>
+        <h1>Bánh của bạn đây nhé chúc bạn ăn nó vui vẻ hông qoạo  </h1>
     </div>
     <h1 id="theicon">🥲🥲🥲</h1>
     <div class="birthday-text">
         Chúc mừng sinh nhật <br>
-        15/03/2003
+        11/04/2003
     </div>
 </body>
 </html>
